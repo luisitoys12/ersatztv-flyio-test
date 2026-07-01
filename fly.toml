@@ -1,5 +1,5 @@
 app = 'ersatztv-test'
-primary_region = 'mia'
+primary_region = 'qro'
 
 [build]
   dockerfile = 'Dockerfile'

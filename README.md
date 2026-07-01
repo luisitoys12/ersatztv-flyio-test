@@ -12,7 +12,8 @@ Terabox (WebDAV)
     ├── /canal2  →  rclone mount →  /mnt/canal2  →  ErsatzTV Canal 2
     └── /canal3  →  rclone mount →  /mnt/canal3  →  ErsatzTV Canal 3 (Comerciales)
 
-Fly.io Volume: /config (persistente)
+Fly.io Volume : /config (persistente)
+Fly.io Region : qro (Querétaro, México)
 Fly.io App URL: https://ersatztv-test.fly.dev
 ```
 
@@ -68,7 +69,7 @@ fly secrets set TERABOX_CANAL3_PATH="/TuCarpeta/Comerciales"
 ### 5. Crear volumen persistente para la config
 
 ```bash
-fly volumes create ersatztv_config --size 3 --region mia
+fly volumes create ersatztv_config --size 3 --region qro
 ```
 
 ### 6. Hacer deploy
@@ -141,4 +142,4 @@ El `.gitignore` ya los excluye.
 
 ---
 
-> 🧪 Este es un repo de **prueba**. Una vez validado, mover a producción con volumen más grande y región `qro` (Querétaro, la más cercana a Irapuato).
+> 🧪 Este es un repo de **prueba**. Una vez validado, mover a producción con volumen más grande y región `qro` (Querétaro — la más cercana a Irapuato, Gto.).
