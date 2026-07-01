@@ -1,0 +1,4 @@
+rclone.conf
+.env
+secrets.example.sh
+*.log

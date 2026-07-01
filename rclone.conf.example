@@ -1,0 +1,7 @@
+[terabox]
+type = webdav
+url = https://dav.terabox.com
+vendor = other
+user = TU_EMAIL@ejemplo.com
+pass = TU_PASSWORD_ENCRIPTADO
+# Para encriptar tu password: rclone obscure TU_PASSWORD

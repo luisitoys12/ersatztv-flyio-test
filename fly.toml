@@ -1,0 +1,31 @@
+app = 'ersatztv-test'
+primary_region = 'mia'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  TZ = 'America/Mexico_City'
+  PUID = '1000'
+  PGID = '1000'
+
+[[services]]
+  internal_port = 8409
+  protocol = 'tcp'
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+  [services.concurrency]
+    type = 'connections'
+    hard_limit = 25
+    soft_limit = 20
+
+[mounts]
+  source = 'ersatztv_config'
+  destination = '/config'
